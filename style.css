@@ -122,12 +122,15 @@ body {
 
 .intro {
     padding: 2em 2em;
-    color: #ffffff;
     background: #3e77e9;
 }
 
+.intro p{
+	color: white;
+	margin: 0 auto;
+    max-width: 550px;
+}
 
-.intro p,
 .test-area {
     margin: 0 auto;
     max-width: 550px;
