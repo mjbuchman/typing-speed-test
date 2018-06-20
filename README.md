@@ -1,7 +1,18 @@
 # Typing Speed Test
 
-## How to use:
-Clone the repository and run the index.html file.
+## Project Purpose
+Demonstrate Javascript knowledge in conjuction with HTML and CSS.
 
+## How to Use
+Clone the [repository](https://github.com/mjbuchman/typing-speed-test) and run the index.html file.
 
+## Features
+-Once the user begins typing the game/timer starts
+-Running 6 digit timer
+-Text box changes color to red to indicate errors as script actively compares the texts
+-Text box changes color to green to indicate completion
+-Reset button to restart at any time
+-Night Mode button to toggle between css themes
 
+## Resources Used
+### Font:
