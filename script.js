@@ -1,3 +1,4 @@
+// Pull sections of document as needed for script
 const mastHeader = document.querySelector(".masthead");
 const introHeader = document.querySelector(".intro");
 const testWrapper = document.querySelector(".test-wrapper");
@@ -28,6 +29,7 @@ function runTimer() {
     theTimer.innerHTML = currentTime;
     timer[3]++;
 
+    // Establish timer rollover
     timer[0] = Math.floor((timer[3]/100)/60);
     timer[1] = Math.floor((timer[3]/100) - (timer[0] * 60));
     timer[2] = Math.floor(timer[3] - (timer[1] * 100) - (timer[0] * 6000));
@@ -42,8 +44,9 @@ function findWordsPerMinute(){
 // Match the text entered with the provided text on the page:
 function spellCheck() {
     let textEntered = testArea.value;
-    let originTextMatch = originText.substring(0,textEntered.length);
+    let originTextMatch = originText.substring(0,textEntered.length);  // Substring of full sample text to match to current input from user
 
+    // If complete change box to green, otherwise continue to compare for accuracy
     if (textEntered == originText) {
         findWordsPerMinute();
         clearInterval(interval);
@@ -82,38 +85,30 @@ function reset() {
 
 // Turn on Night Mode:
 function nightModeOn(){
-    mastHeader.style.backgroundColor = "#23272A";
-    introHeader.style.backgroundColor = "#23272A";
-    document.body.style.backgroundColor = "#2C2F33";
-    testArea.style.backgroundColor = "#2C2F33";
-    document.getElementById('p1').style.color = "white";
-    document.getElementById('p2').style.color = "white";
-    document.getElementById('p3').style.color = "white";
-    theTimer.style.color = "white";
-    testWrapper.style.color = "white";
-    sampleText.style.backgroundColor = "#23272A";
-    //nightModeButton.style.background = "#2C2F33";
-    nightModeButton.innerHTML= "Day Mode";
-    //resetButton.style.background = "#2C2F33";
-    testArea.style.color = "white";
+    mastHeader.style.backgroundColor = "#23272A";          // Changes header background
+    introHeader.style.backgroundColor = "#23272A";         // Changes secondary header background
+    document.body.style.backgroundColor = "#2C2F33";       // Changes body background
+    testArea.style.backgroundColor = "#2C2F33";            // Changes textbox background
+    document.getElementById('p2').style.color = "white";   // Changes sample text font color
+    document.getElementById('p3').style.color = "white";   // Changes words per minute font color
+    theTimer.style.color = "white";                        // Changes timer font color
+    sampleText.style.backgroundColor = "#23272A";          // Changes sample text box color
+    nightModeButton.innerHTML= "Day Mode";                 // Changes 'Night Mode' text to 'Day Mode'
+    testArea.style.color = "white";                        // Changes textbox font color
 }
 
 // Turn on Day Mode:
 function dayModeOn(){
-    mastHeader.style.backgroundColor = "#0947C2";
-    introHeader.style.backgroundColor = "#3e77e9";
-    document.body.style.backgroundColor = "white";
-    testArea.style.backgroundColor = "white";
-    document.getElementById('p1').style.color = "black";
-    document.getElementById('p2').style.color = "black";
-    document.getElementById('p3').style.color = "black";
-    theTimer.style.color = "black";
-    testWrapper.style.color = "black";
-    sampleText.style.backgroundColor = "#EDEDED";
-    //nightModeButton.style.background = "white";
-    nightModeButton.innerHTML= "Night Mode";
-    //resetButton.style.background = "white";
-    testArea.style.color = "black";
+    mastHeader.style.backgroundColor = "#0947C2";          // Changes header background
+    introHeader.style.backgroundColor = "#3e77e9";         // Changes secondary header background
+    document.body.style.backgroundColor = "white";         // Changes body background
+    testArea.style.backgroundColor = "white";              // Changes textbox background
+    document.getElementById('p2').style.color = "black";   // Changes sample text font color
+    document.getElementById('p3').style.color = "black";   // Changes words per minute font color
+    theTimer.style.color = "black";                        // Changes timer font color
+    sampleText.style.backgroundColor = "#EDEDED";          // Changes sample text box color
+    nightModeButton.innerHTML= "Night Mode";               // Changes 'Day Mode' text to 'Night Mode'
+    testArea.style.color = "black";                        // Changes textbox font color
 }
 
 // Decide whether to turn on day or night mode:
@@ -122,7 +117,7 @@ function nightModeToggle(){
     modeCount%2 == 0 ? dayModeOn() : nightModeOn();
 }
 
-// Event listeners for keyboard input and the reset:
+// Event listeners for keyboard input and the reset/night mode buttons:
 testArea.addEventListener("keypress", start, false);
 testArea.addEventListener("keyup", spellCheck, false);
 resetButton.addEventListener("click", reset, false);
