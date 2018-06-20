@@ -126,8 +126,8 @@ body {
 }
 
 .intro p{
-	color: white;
-	margin: 0 auto;
+    color: white;
+    margin: 0 auto;
     max-width: 550px;
 }
 
@@ -137,7 +137,7 @@ body {
 }
 
 .test-area {
-	float: center;
+    float: center;
     margin-bottom: 4em;
     padding: 0 2em;
 }
@@ -180,13 +180,13 @@ body {
 }
 
 .right-banner{
-	margin: 0 auto;
-	max-width: 120px;
+    margin: 0 auto;
+    max-width: 120px;
 }
 
 .right-banner{
-	float: right;
-	margin-top: 1em;
+    float: right;
+    margin-top: 1em;
     margin-bottom: 4em;
     padding: 0 2em;
 }
@@ -220,6 +220,6 @@ body {
 }
 
 #wpm{
-	font-size: 1.5em;
-	font-weight: bold;
+    font-size: 1.5em;
+    font-weight: bold;
 }
