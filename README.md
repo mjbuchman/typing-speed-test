@@ -1,7 +1,7 @@
 # Typing Speed Test
 
 ## Project Purpose
-Demonstrate Javascript knowledge in conjuction with HTML and CSS.
+Demonstrate Javascript knowledge in conjunction with HTML and CSS.
 
 ## How to Use
 Clone the [repository](https://github.com/mjbuchman/typing-speed-test) and run the index.html file.
