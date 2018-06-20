@@ -1,4 +1,7 @@
 # Typing Speed Test
 
-# Project Purpose:
-safedsfsdgfafsaasf
+## How to use:
+Clone the repository and run the index.html file.
+
+
+
