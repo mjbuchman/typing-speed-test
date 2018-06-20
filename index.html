@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Typing Speed Test</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i,900,900i" type="text/css" media="all">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class = "masthead">
+        <h1>Typing Speed Test</h1>
+    </header>
+    <main class = "main">
+        <article class = "intro">
+            <p id=p1>Welcome to the typing speed test! You have been provided with a short passage below. Your objective is to duplicate the sample text in the following box, EXACTLY as it appears. The timer will start when you begin typing and will stop when you have precisely copied the text. Begin whenever you are ready!</p>
+        </article>
+
+        <aside class="right-banner">
+            <button id="night-mode">Night Mode</button>
+        </aside>
+
+        <section class="test-area">
+            <div id="sample-text">
+                <p id=p2>This is the sample text. Please copy me as quickly as you possibly can. Make sure you don't go too fast and make a mistake. The text must be recreated EXACTLY as it appears!</p>
+            </div>
+
+            <div class="test-wrapper">
+                <textarea id="test-area" name="textbox" rows="6" placeholder="Begin typing here whenever you are ready."></textarea>
+            </div>
+
+            <div class="meta">
+                <section id="clock">
+                    <div class="timer">00:00:00</div>
+                </section>
+
+                <button id="reset">Reset</button>
+            </div>
+
+            <div id="wpm">
+                <p id=p3>Words per minute: 0</p>
+            </div><!-- #wpm-->
+        </section>><!-- .test-area-->
+
+    </main>
+
+</body>
+
+</html>
